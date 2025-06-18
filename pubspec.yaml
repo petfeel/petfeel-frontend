@@ -1,0 +1,74 @@
+name: test123
+description: "A new Flutter project."
+
+publish_to: 'none' # Remove this line if you wish to publish to pub.dev
+
+version: 1.0.0+1
+
+environment:
+  sdk: ^3.7.2
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+
+  cupertino_icons: ^1.0.8
+  image_picker: ^1.0.4
+  http: ^0.13.6
+  table_calendar: ^3.2.0
+  fl_chart: ^0.66.0
+  shared_preferences: ^2.2.2
+  video_player: ^2.8.2
+  shimmer: ^3.0.0
+
+  # ─────────────────────────────────────────
+  # MJPEG 스트리밍(Dart 3 호환)
+  flutter_mjpeg: ^2.0.4
+
+  # ── 녹음 기능을 위한 패키지 추가 ──
+  flutter_sound: ^9.2.13
+
+  # ↓ 이 줄을 반드시 최신 버전으로! ↓
+  permission_handler: ^12.0.0+1
+
+  path_provider: ^2.0.11
+  path: ^1.8.3
+  http_parser: ^4.0.2
+  flutter_local_notifications: ^17.2.4
+  web_socket_channel: ^2.4.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^5.0.0
+  flutter_launcher_icons: ^0.13.1  # 아이콘 생성기
+
+flutter:
+  uses-material-design: true
+
+  assets:
+    - assets/images/
+    - assets/videos/
+
+  fonts:
+    - family: LGSmartUI
+      fonts:
+        - asset: assets/fonts/LG_SMART_UI-REGULAR.TTF
+          weight: 400
+        - asset: assets/fonts/LG_SMART_UI-LIGHT.TTF
+          weight: 300
+        - asset: assets/fonts/LG_SMART_UI-SEMIBOLD.TTF
+          weight: 600
+        - asset: assets/fonts/LG_SMART_UI-BOLD.TTF
+          weight: 700
+
+flutter_icons:
+  android: true
+  ios: true
+  image_path: "assets/images/app_icon.png"
+
+# ── 의존성 강제 오버라이드 ──
+dependency_overrides:
+  permission_handler_android: ^12.0.0+1
+
